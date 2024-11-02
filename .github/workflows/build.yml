@@ -31,7 +31,7 @@
 
        - name: Package with PyInstaller
          run: |
-           pyinstaller --onefile --windowed --icon=app_icon.ico port_scanner.py
+           pyinstaller --onefile --windowed --icon=app_icon.ico port_scanner.py --add-data "port_fingerprints.json;." --add-data "port_config.json;." --add-data "scan_config.json;."
 
        - name: Upload artifact
          uses: actions/upload-artifact@v2
