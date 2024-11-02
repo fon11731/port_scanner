@@ -1,0 +1,44 @@
+{
+    "scan_profiles": {
+        "默认配置": {
+            "port_mode": "common",
+            "port_range": "1-1000",
+            "custom_ports": "",
+            "timeout": 1,
+            "threads": 100
+        },
+        "快速扫描": {
+            "port_mode": "predefined",
+            "predefined_group": "常用端口",
+            "timeout": 0.5,
+            "threads": 200
+        },
+        "完整扫描": {
+            "port_mode": "range",
+            "port_range": "1-65535",
+            "timeout": 2,
+            "threads": 50
+        },
+        "Web服务扫描": {
+            "port_mode": "custom",
+            "custom_ports": "80,443,8080,8443,8888",
+            "timeout": 1,
+            "threads": 100
+        },
+        "自用配置": {
+            "port_mode": "custom",
+            "port_range": "",
+            "custom_ports": "80,443,9000,6379,9853",
+            "timeout": 1.0,
+            "threads": 100
+        }
+    },
+    "last_used": {
+        "profile": "自用配置",
+        "port_mode": "custom",
+        "port_range": "",
+        "custom_ports": "80,443,9000,6379,9853",
+        "timeout": 1.0,
+        "threads": 100
+    }
+}

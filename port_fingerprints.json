@@ -1,0 +1,74 @@
+{
+    "http": {
+        "ports": [80, 443, 8080, 8443],
+        "patterns": {
+            "Apache": ["Server: Apache", "Apache/"],
+            "Nginx": ["Server: nginx", "nginx/"],
+            "IIS": ["Server: Microsoft-IIS", "X-Powered-By: ASP.NET"],
+            "Tomcat": ["Server: Apache-Coyote", "Apache Tomcat"],
+            "LiteSpeed": ["Server: LiteSpeed"],
+            "OpenResty": ["Server: openresty"],
+            "Caddy": ["Server: Caddy"]
+        }
+    },
+    "ftp": {
+        "ports": [21],
+        "patterns": {
+            "vsftpd": ["220 .* vsftpd"],
+            "ProFTPD": ["220 .* ProFTPD"],
+            "FileZilla": ["220 .* FileZilla"],
+            "Pure-FTPd": ["220 .* Pure-FTPd"]
+        }
+    },
+    "ssh": {
+        "ports": [22],
+        "patterns": {
+            "OpenSSH": ["SSH-2.0-OpenSSH"],
+            "Dropbear": ["SSH-2.0-dropbear"]
+        }
+    },
+    "mysql": {
+        "ports": [3306],
+        "patterns": {
+            "MySQL": ["5.0.51a", "5.5", "5.6", "5.7", "8.0"],
+            "MariaDB": ["10.0", "10.1", "10.2", "10.3", "10.4", "10.5"]
+        }
+    },
+    "redis": {
+        "ports": [6379],
+        "patterns": {
+            "Redis": ["-DENIED Redis", "+PONG", "-ERR operation not permitted"]
+        }
+    },
+    "postgresql": {
+        "ports": [5432],
+        "patterns": {
+            "PostgreSQL": ["PostgreSQL"]
+        }
+    },
+    "smtp": {
+        "ports": [25, 587, 465],
+        "patterns": {
+            "Postfix": ["220 .* Postfix"],
+            "Exim": ["220 .* Exim"],
+            "Sendmail": ["220 .* Sendmail"],
+            "Microsoft Exchange": ["220 .* Microsoft ESMTP"]
+        }
+    },
+    "pop3": {
+        "ports": [110, 995],
+        "patterns": {
+            "Dovecot": ["+OK Dovecot"],
+            "Courier": ["+OK Courier"],
+            "Microsoft Exchange": ["+OK Microsoft Exchange"]
+        }
+    },
+    "imap": {
+        "ports": [143, 993],
+        "patterns": {
+            "Dovecot": ["* OK Dovecot"],
+            "Courier": ["* OK Courier"],
+            "Microsoft Exchange": ["* OK Microsoft Exchange"]
+        }
+    }
+} 
